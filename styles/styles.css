@@ -21,6 +21,9 @@ body {
 .container {
     display: flex;
 }
+.undefined {
+    visibility: none;
+}
 /*
     ! =================== SIDEBAR START =================== !
 */
@@ -61,7 +64,7 @@ a {
     display: flex;
     cursor: pointer;
 }
-span {
+.beautifulLetter {
     font-family: 'Meow Script', cursive;
     margin-right: 5px;
     font-size: 50px;
@@ -157,7 +160,7 @@ span {
     margin-top: 120px;
     text-align: center;
     justify-content: center;
-    margin-left: 100px;
+    margin-left: 200px;
     letter-spacing: 2px;
 }
 .my-name {
@@ -181,7 +184,7 @@ span {
   }
 .description-me {
     margin-right: 200px;
-    margin-top: 70px;
+    margin-top: 50px;
 }
 .description {
     margin-top: 30px;
@@ -205,8 +208,8 @@ span {
 .description:hover::before {
     transform: scaleX(1);
     transform-origin: center;
-    width: 395px;
-    height: 157px;
+    width: 154px;
+    height: 140px;
     border-bottom: 2px solid var(--orange-something-600); 
 }
 .description::after {
@@ -218,17 +221,20 @@ span {
     border-top: 5px solid var(--orange-something-600);
     right: 0;
     top: 0;
-    margin-right: -240px;
     transition: transform 0.5s ease-out,width 1s,height 1.5s,border-top 2s;
 }
 .description:hover::after {
     transform: scaleX(1);
     transform-origin: center;
-    width: 397px;
-    height: 157px;
+    width: 154px;
+    height: 140px;
     border-top: 2px solid var(--orange-something-600); 
 }
 .my-photo {
+    position: relative;
+    left: 120px;
+    width: 300px;
+    height: 400px;
     padding: 20px;
 }
 .hire {
@@ -236,6 +242,7 @@ span {
     background: linear-gradient(75deg,rgba(98, 29, 31, 0.75), rgba(157, 9, 27, 0.75), rgba(84, 0, 0, 0.75));
     padding: 30px 40px;
     margin-top: 90px;
+    margin-bottom: 40px;
     font-family: 'Aboreto', cursive;
     color: rgb(155, 155, 155);
     cursor: pointer;
@@ -269,4 +276,105 @@ span {
 .side-p:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+/* ! my projects right bar ! */
+.projects-all {
+    margin-left: 50px;
+}
+.projects-name {
+    position: relative;
+    text-align: center;
+    margin-left: 120px;
+    margin-top: 120px;
+    margin-bottom: 40px;
+}
+.project1 {
+    position: relative;
+}
+.game-photo {
+    position: relative;
+    margin-left: 1100px;
+    width: 400px;
+    height: 400px;
+}
+.project1Text {
+    font-size: 25px;
+}
+.project2Text { 
+    font-size: 25px;
+    margin-top: 120px;
+}
+.link-on-game {
+    position: absolute;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.project3 {
+    position: relative;
+    margin-top: 120px;
+}
+.game-description {
+    margin-top: 20px;
+    position: absolute;
+}
+/*! contacts !*/
+.contacts {
+    position: relative;
+    display: flex;
+}
+.right-contentContacts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+    height: 50px;
+}
+.h2Contacts {
+    font-size: 25px;
+    display: flex;
+    margin-bottom: 100px;
+}
+.linkedn {
+    display: flex;
+}
+.linkednLink {
+    position: relative;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+.telegram {
+    width: 200px;
+    margin-top: 60px;
+    display: flex;
+    position: absolute;
+}
+.github {
+    top: 70px;
+    width: 500px;
+    margin-top: 60px;
+    display: flex;
+    position: absolute;
+}
+/* ! skills !*/
+
+.work-experience-OwnerTitle {
+    margin-top: 50px;
+    margin-right: 400px;
+    color: var(--white-list-500);
+}
+.work-experience-title{
+    color: white;
+}
+.list-work {
+    color: var(--orange-something-600);
+    display: flex;
+    flex-direction: column;
+
+}
+.ul-work {
+    color: white;
+    font-size: 15px;
+}
+.list-skills {
+    
 }
