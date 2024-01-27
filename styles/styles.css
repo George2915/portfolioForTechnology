@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Meow+Script&family=Playfair+Display+SC:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Voces&display=swap');
+:root {
+    --white-list-500: rgb(207, 207, 207);
+    --orange-something-600: rgb(133, 29, 10);
+}
+* {
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: var(--white-list-500);
+    background-size: cover;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.52), rgba(17, 17, 17, 0.73)),
+    url('/images/1311860.jpeg');
+
+}
+.container {
+    display: flex;
+}
+/*
+    ! =================== SIDEBAR START =================== !
+*/
+.left-content {
+    min-height: 100vh;
+    padding-left: 50px;
+    padding-top: 50px;
+    text-decoration: none;
+    list-style-type: none;
+    height: 100%;
+    left: 240;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 270px;
+    position: sticky;
+}
+.background {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+    filter: alpha(opacity=60);
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+li {
+    display: flex;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+a {
+    color: var(--white-list-500);
+    text-decoration: none;
+    display: flex;
+    cursor: pointer;
+}
+span {
+    font-family: 'Meow Script', cursive;
+    margin-right: 5px;
+    font-size: 50px;
+    color: var(--orange-something-600);
+    margin-top: -10px;
+}
+.left-content > .the-name > a::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-left: 2px solid var(--orange-something-600);
+    border-bottom: 5px solid var(--orange-something-600);
+    left: 0;
+    bottom: 0;
+    transition: transform 0.5s ease-out,width 1s,height 1.5s,border-bottom 2s;
+}
+.left-content > .the-name > a:hover::before {
+    transform: scaleX(1);
+    transform-origin: center;
+    width: 188px;
+    height: 96px;
+    border-bottom: 2px solid var(--orange-something-600); 
+}
+.left-content > .the-name > a::after {
+    transform: scaleX(1);
+    content: "";
+    position: absolute;
+    width:  30px;
+    height: 40px;
+    border-right: 2px solid var(--orange-something-600);
+    border-top: 5px solid var(--orange-something-600);
+    right: 0;
+    margin-right: -20px; /* ? strange way to move this shit */
+    top: 0;
+    transition: transform 0.5s ease-out,width 1s,height 1.5s,border-top 2s;
+    transform-origin: right;
+}
+.left-content > .the-name > a:hover::after{
+    transform: scaleX(1);
+    transform-origin: center;
+    width: 188px;
+    height: 97px;
+    border-top: 2px solid var(--orange-something-600);
+} 
+.the-name {
+    margin-right: 50px;
+    margin-bottom: 200px;
+    padding: 25px;
+    letter-spacing: 4px;
+    position: relative;
+}
+.gg { /* * FOR ICONS */
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 80px;
+    height: 50px;
+    margin-top: 5px;
+    margin-right: 20px;
+    color: var(--orange-something-600);
+}
+.gg-code-slash {
+    margin-right: 25px;
+    margin-left: 5px;
+}
+.gg-user {
+    margin-right: 22px;
+}
+.gg-phone {
+    margin-right: 12px;
+    right: 4px;
+}
+.gg-toolbox {
+    right: 1px;
+    margin-right: 15px;
+}
+.side-p {
+    display: inline-block;
+    position: relative;
+    margin-top: 1px;
+}
+.cont {
+    top: 2px;
+}
+.ski {
+    bottom: 2px;
+}
+/*   ! ============ RIGHT SIDE ========== ! */
+.right-content {
+    display: flex;
+    font-size: 12px;
+    margin-top: 120px;
+    text-align: center;
+    justify-content: center;
+    margin-left: 100px;
+    letter-spacing: 2px;
+}
+.my-name {
+    position: relative;
+    font-family: 'Voces', cursive;
+    font-size: 40px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid var(--orange-something-600);
+    margin: 0 auto 40px auto;
+    letter-spacing: .12em;
+    animation: typing-process 2.5s steps(44), blink-border 0.75s step-end infinite;
+    white-space: nowrap;
+}
+@keyframes typing-process {
+    from {width: 0}
+    to {width: 100%;}
+}
+@keyframes blink-border {
+    from, to { border-color: transparent }
+    50% { border-color: var(--orange-something-600); }
+  }
+.description-me {
+    margin-right: 200px;
+    margin-top: 70px;
+}
+.description {
+    margin-top: 30px;
+    width: 160px;
+    letter-spacing: 2px;
+    padding: 20px;
+    position: relative;
+    font-size: 15px;
+}
+.description::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 30px;
+    border-left: 3px solid var(--orange-something-600);
+    border-bottom: 5px solid var(--orange-something-600);
+    left: 0;
+    bottom: 0;
+    transition: transform 0.5s ease-out,width 1s,height 1.5s,border-bottom 2s;
+}
+.description:hover::before {
+    transform: scaleX(1);
+    transform-origin: center;
+    width: 395px;
+    height: 157px;
+    border-bottom: 2px solid var(--orange-something-600); 
+}
+.description::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    border-right: 3px solid var(--orange-something-600);
+    border-top: 5px solid var(--orange-something-600);
+    right: 0;
+    top: 0;
+    margin-right: -240px;
+    transition: transform 0.5s ease-out,width 1s,height 1.5s,border-top 2s;
+}
+.description:hover::after {
+    transform: scaleX(1);
+    transform-origin: center;
+    width: 397px;
+    height: 157px;
+    border-top: 2px solid var(--orange-something-600); 
+}
+.my-photo {
+    padding: 20px;
+}
+.hire {
+    left: -100px;
+    background: linear-gradient(75deg,rgba(98, 29, 31, 0.75), rgba(157, 9, 27, 0.75), rgba(84, 0, 0, 0.75));
+    padding: 30px 40px;
+    margin-top: 90px;
+    font-family: 'Aboreto', cursive;
+    color: rgb(155, 155, 155);
+    cursor: pointer;
+    border-radius: 40px;
+    border-bottom-left-radius: 20px;
+    transition: all 0.5s ease;
+    display: inline-block;
+    font-weight: 600;
+    position: relative;
+}
+.hire:hover {
+    transform: scale(1.25);
+}
+.side-p {
+    position: relative;
+    display: inline-block;
+}
+.side-p::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    margin-top: 30px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(75deg ,rgba(59, 15, 39, 0.75),rgba(54, 8, 78, 0.75),rgba(50,0,90,0.75));
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.side-p:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
